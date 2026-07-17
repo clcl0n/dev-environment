@@ -2,6 +2,7 @@ module "eck" {
   source = "./modules/eck"
   cluster_name = var.eck.cluster_name
   namespace = var.eck.namespace
+  spec = var.eck.spec
   elasticsearch = var.eck.elasticsearch
   apm = var.eck.apm
   kube_config_path = var.kube_config_path
@@ -11,6 +12,7 @@ module "grafana" {
   source = "./modules/grafana"
   namespace    = var.grafana.namespace
   cluster_name = var.grafana.cluster_name
+  chart_version = var.grafana.chart_version
   prometheus = var.grafana.prometheus
   grafana = var.grafana.grafana
   kube_config_path = var.kube_config_path

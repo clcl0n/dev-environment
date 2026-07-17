@@ -4,7 +4,7 @@ resource "helm_release" "prometheus" {
   chart            = "kube-prometheus-stack"
   create_namespace = true
   namespace        = var.namespace
-  version          = "77.10.0"
+  version          = var.chart_version
 
   values = [
     <<EOT

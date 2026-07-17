@@ -50,7 +50,7 @@ eck-elasticsearch:
   # This is adjusting the full name of the elasticsearch resource so that both the eck-elasticsearch
   # and the eck-kibana chart work together by default in the eck-stack chart.
   fullnameOverride: es
-  # version: 9.0.0
+  version: ${var.spec.version}
   nodeSets:
   - name: default
     count: 1

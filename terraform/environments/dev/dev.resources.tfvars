@@ -1,6 +1,9 @@
 eck = {
   cluster_name = "elastic-cluster"
   namespace    = "elastic-cluster"
+  spec = {
+    version = "9.4.3"
+  }
   elasticsearch = {
     password = "elastic"
     persistence = {
@@ -25,6 +28,7 @@ eck = {
 grafana = {
   namespace    = "monitoring"
   cluster_name = "monitoring-cluster"
+  chart_version = "87.16.1"
   prometheus = {
     resources = {
       storage_size = "15Gi"

@@ -2,6 +2,9 @@ variable "eck" {
   type = object({
     cluster_name = string
     namespace = string
+    spec = object({
+      version = string
+    })
     elasticsearch = object({
       password = string
       persistence = object({
@@ -28,17 +31,18 @@ variable "grafana" {
   type = object({
     namespace = string
     cluster_name = string
+    chart_version = string
     prometheus = object({
       resources = object({
         # replica_count = number
         storage_size = string
         requests = object({
           memory = string
-          cpu    = string
+          cpu = string
         })
         limits = object({
           memory = string
-          cpu    = string
+          cpu = string
         })
       })
     })

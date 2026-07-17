@@ -10,6 +10,12 @@ variable "namespace" {
   type = string
 }
 
+variable "spec" {
+  type = object({
+    version = string
+  })
+}
+
 variable "elasticsearch" {
   type = object({
     password = string
@@ -18,11 +24,11 @@ variable "elasticsearch" {
     })
     resources = object({
       requests = object({
-        cpu    = string
+        cpu = string
         memory = string
       })
       limits = object({
-        cpu    = string
+        cpu = string
         memory = string
       })
     })
