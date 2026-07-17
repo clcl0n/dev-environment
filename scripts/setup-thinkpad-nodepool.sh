@@ -31,11 +31,16 @@ BRIDGE_FILE="/etc/netplan/50-bridge.yaml"
 
 cat > "$BRIDGE_FILE" << 'EOF'
 network:
+  version: 2
+  ethernets:
+    enp2s0f0:
+      dhcp4: false
   bridges:
     br0:
       interfaces:
         - enp2s0f0
       dhcp4: true
+      dhcp-identifier: mac
       parameters:
         stp: false
         forward-delay: 0
@@ -47,5 +52,10 @@ chmod 600 "$BRIDGE_FILE"
 # Apply netplan configuration
 netplan apply
 
+systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+systemctl mask systemd-suspend.service
+
 # Install dependencies
 snap install multipass
+
+snap refresh --hold=forever multipass

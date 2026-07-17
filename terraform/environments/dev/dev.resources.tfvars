@@ -8,12 +8,12 @@ eck = {
     }
     resources = {
       requests = {
-        cpu    = "2"
-        memory = "5Gi"
+        cpu    = "3"
+        memory = "8Gi"
       }
       limits = {
         cpu    = "3"
-        memory = "9Gi"
+        memory = "8Gi"
       }
     }
   }
@@ -29,7 +29,7 @@ grafana = {
     resources = {
       storage_size = "15Gi"
       requests = {
-        memory = "512Mi"
+        memory = "1Gi"
         cpu    = "500m"
       }
       limits = {
@@ -45,10 +45,10 @@ grafana = {
       storage_size = "5Gi"
       requests = {
         memory = "256Mi"
-        cpu = "250m"
+        cpu = "500m"
       }
       limits = {
-        memory = "512Mi"
+        memory = "256Mi"
         cpu = "500m"
       }
     }
@@ -74,8 +74,8 @@ mongo = {
   resource = {
     replica_count = 1
     requests = {
-      memory = "512Mi"
-      cpu = "0.5"
+      memory = "1Gi"
+      cpu = "1"
     }
     limits = {
       memory = "2Gi"
@@ -118,8 +118,8 @@ postgres = {
   resources = {
     replica_count = 1
     requests = {
-      memory = "4Gi"
-      cpu = 3
+      memory = "5Gi"
+      cpu = 4
     }
     limits = {
       memory = "5Gi"
@@ -144,12 +144,12 @@ rabbitmq = {
   resource = {
     replica_count = 1
     requests = {
-      memory = "1Gi"
-      cpu = "500m"
+      memory = "2Gi"
+      cpu = "1000m"
     }
     limits = {
       memory = "2Gi"
-      cpu = "1"
+      cpu = "1000m"
     }
   }
 }
@@ -169,12 +169,12 @@ s3 = {
   }
   resources = {
     requests = {
-      memory = "512Mi"
-      cpu = "500m"
+      memory = "1Gi"
+      cpu = "1000m"
     }
     limits = {
-      memory = "2Gi"
-      cpu = "1"
+      memory = "1Gi"
+      cpu = "1000m"
     }
   }
 }
@@ -194,11 +194,11 @@ valkey = {
   resources = {
     requests = {
       memory = "512Mi"
-      cpu    = "250m"
+      cpu    = "512m"
     }
     limits = {
-      memory = "1Gi"
-      cpu    = "500m"
+      memory = "512Mi"
+      cpu    = "512m"
     }
   }
 }

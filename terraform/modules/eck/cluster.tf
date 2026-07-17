@@ -56,8 +56,16 @@ eck-elasticsearch:
     count: 1
     config:
       node.store.allow_mmap: false
+      # reindex.remote.whitelist: "nmh-dam-production-es8.es.europe-west3.gcp.cloud.es.io:9243"
     podTemplate:
       spec:
+        initContainers:
+          - name: install-plugins
+            command:
+              - sh
+              - -c
+              - |
+                bin/elasticsearch-plugin install --batch analysis-icu
         containers:
           - name: elasticsearch
             resources:
