@@ -9,7 +9,7 @@ resource "helm_release" "postgres_cluster" {
   namespace  = var.namespace
   chart      = "cluster"
   repository = "https://cloudnative-pg.github.io/charts"
-  version    = "0.3.1"
+  version    = var.chart_version
 
   depends_on = [kubernetes_secret.postgres_superuser_secret, kubernetes_namespace.postgres_cluster_namespace]
 

@@ -8,6 +8,11 @@ variable "namespace" {
   type = string
 }
 
+variable "chart_version" {
+  description = "Version of the PostgreSQL chart"
+  type = string
+}
+
 variable "cluster_name" {
   description = "Name of the PostgreSQL cluster"
   type = string

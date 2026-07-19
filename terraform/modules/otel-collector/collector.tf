@@ -4,14 +4,13 @@ resource "helm_release" "mongo_cluster" {
   create_namespace = true
   chart            = "opentelemetry-collector"
   repository       = "https://open-telemetry.github.io/opentelemetry-helm-charts"
-  version          = "0.134.0"
+  version          = var.chart_version
 
   values = [
     <<EOT
 mode: statefulset
 image:
   repository: "otel/opentelemetry-collector-contrib"
-  tag: ${var.image.tag}
 service:
     enabled: true
     type: LoadBalancer

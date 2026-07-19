@@ -11,7 +11,7 @@ mongo_operator = {
 
 postgres_operator = {
   namespace     = "postgres-operator"
-  chart_version = "0.26.0"
+  chart_version = "0.29.0"
 }
 
 kube_config_path = "~/.kube/config"

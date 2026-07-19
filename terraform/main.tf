@@ -33,9 +33,9 @@ module "otel-collector" {
   source = "./modules/otel-collector"
   name = var.otel_collector.name
   namespace = var.otel_collector.namespace
+  chart_version = var.otel_collector.chart_version
   apm_token = var.otel_collector.apm_token
   apm_url = var.otel_collector.apm_url
-  image = var.otel_collector.image
   resource = var.otel_collector.resource
   kube_config_path = var.kube_config_path
 }
@@ -44,6 +44,7 @@ module "postgres" {
   source = "./modules/postgres"
   namespace    = var.postgres.namespace
   cluster_name = var.postgres.cluster_name
+  chart_version = var.postgres.chart_version
   image = var.postgres.image
   persistence = var.postgres.persistence
   resources = var.postgres.resources

@@ -10,18 +10,16 @@ variable "name" {
   type = string
 }
 
+variable "chart_version" {
+  type = string
+}
+
 variable "apm_url" {
   type    = string
 }
 
 variable "apm_token" {
   type = string
-}
-
-variable "image" {
-  type = object({
-    tag = string
-  })
 }
 
 variable "resource" {

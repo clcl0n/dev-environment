@@ -91,10 +91,11 @@ mongo = {
 otel_collector = {
   name = "otel-collector"
   namespace = "otel-collector"
+  chart_version = "0.165.0"
   apm_token = "apm-secret-token"
   apm_url = "apm-apm-http.elastic-cluster:8200"
   image = {
-    tag = "0.135.0"
+    tag = "0.15.0"
   }
   resource = {
     requests = {
@@ -111,10 +112,11 @@ otel_collector = {
 postgres = {
   namespace = "postgres-cluster"
   cluster_name = "postgres-cluster"
+  chart_version = "0.8.0"
   database_superuser_name = "postgres"
   database_superuser_password = "postgres"
   image = {
-    tag = "17.6"
+    tag = "18.4"
   }
   persistence = {
     storage_size = "75Gi"

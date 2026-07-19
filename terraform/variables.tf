@@ -99,11 +99,9 @@ variable "otel_collector" {
   type = object({
     namespace = string
     name = string
+    chart_version = string
     apm_token = string
     apm_url = string
-    image = object({
-      tag = string
-    })
     resource = object({
       requests = object({
         memory = string
@@ -121,6 +119,7 @@ variable "postgres" {
   type = object({
     namespace = string
     cluster_name = string
+    chart_version = string
     database_superuser_name = string
     database_superuser_password = string
     image = object({
