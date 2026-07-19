@@ -18,4 +18,9 @@ rabbitmq_operator = {
   version = "v2.22.3"
 }
 
+valkey_operator = {
+  namespace     = "valkey-operator-system"
+  chart_version = "0.3.0"
+}
+
 kube_config_path = "~/.kube/config"

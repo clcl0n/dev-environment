@@ -25,3 +25,10 @@ module "rabbitmq-operator" {
   operator_version = var.rabbitmq_operator.version
   kube_config_path = var.kube_config_path
 }
+
+module "valkey-operator" {
+  source = "../valkey-operator"
+  namespace = var.valkey_operator.namespace
+  chart_version = var.valkey_operator.chart_version
+  kube_config_path = var.kube_config_path
+}
