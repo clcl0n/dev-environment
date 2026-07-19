@@ -1,19 +1,19 @@
 resource "helm_release" "mongodb_operator" {
-  name             = "mongodb-community-operator"
+  name             = "mongodb-operator"
   namespace        = var.namespace
   create_namespace = true
-  chart            = "community-operator"
+  chart            = "mongodb-kubernetes"
   repository       = "https://mongodb.github.io/helm-charts"
   version          = var.chart_version
 
   set = [
     {
-      name  = "installCRDs"
-      value = "true"
+      name  = "operator.watchNamespace"
+      value = var.watch_namespace
     },
     {
-      name = "operator.watchNamespace"
-      value = "*"
+      name  = "operator.createResourcesServiceAccountsAndRoles"
+      value = "true"
     }
   ]
 }

@@ -9,6 +9,7 @@ module "mongo-operator" {
   source = "../mongo-operator"
   namespace = var.mongo_operator.namespace
   chart_version = var.mongo_operator.chart_version
+  watch_namespace = var.mongo_operator.watch_namespace
   kube_config_path = var.kube_config_path
 }
 

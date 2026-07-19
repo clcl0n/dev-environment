@@ -64,7 +64,7 @@ mongo = {
   cluster_name = "mongo-cluster"
   spec = {
     replica_count = 1
-    version = "8.0.13"
+    version = "8.3.4"
   }
   admin_password = "admin"
   persistence = {

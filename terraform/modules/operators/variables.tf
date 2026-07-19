@@ -7,8 +7,9 @@ variable "eck_operator" {
 
 variable "mongo_operator" {
   type = object({
-    namespace = string
-    chart_version = string
+    namespace       = string
+    chart_version   = string
+    watch_namespace = string
   })
 }
 
