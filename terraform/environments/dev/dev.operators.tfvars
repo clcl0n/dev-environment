@@ -14,4 +14,8 @@ postgres_operator = {
   chart_version = "0.29.0"
 }
 
+rabbitmq_operator = {
+  version = "v2.22.3"
+}
+
 kube_config_path = "~/.kube/config"

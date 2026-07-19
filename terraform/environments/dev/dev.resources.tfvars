@@ -138,7 +138,7 @@ rabbitmq = {
   namespace = "rabbitmq-cluster"
   cluster_name = "rabbitmq-cluster"
   image = {
-    tag = "4.1.4-management"
+    tag = "4.3.2-management"
   }
   auth = {
     username = "admin"

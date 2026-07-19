@@ -20,6 +20,12 @@ variable "postgres_operator" {
   })
 }
 
+variable "rabbitmq_operator" {
+  type = object({
+    version = string
+  })
+}
+
 variable "kube_config_path" {
   type = string
 }

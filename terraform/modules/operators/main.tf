@@ -19,3 +19,9 @@ module "postgres-operator" {
   chart_version = var.postgres_operator.chart_version
   kube_config_path = var.kube_config_path
 }
+
+module "rabbitmq-operator" {
+  source = "../rabbitmq-operator"
+  operator_version = var.rabbitmq_operator.version
+  kube_config_path = var.kube_config_path
+}
